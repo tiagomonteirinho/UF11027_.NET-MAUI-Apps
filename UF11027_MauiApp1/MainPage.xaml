@@ -30,6 +30,15 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
+
+            <Button
+                Text="Click me too!" />
+
+            <Button>
+                <Button.Text>
+                    Don't forget me!
+                </Button.Text>
+            </Button>
         </VerticalStackLayout>
     </ScrollView>
 

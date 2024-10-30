@@ -3,6 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:UF11027_MauiApp1"
              x:Class="UF11027_MauiApp1.App">
+    <!--xmlns: XML namespace.-->
+    <!--xmlns:x: XML namespace prefix.-->
+
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
