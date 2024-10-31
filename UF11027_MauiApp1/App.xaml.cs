@@ -13,7 +13,7 @@
             //navPage.BarTextColor = Colors.Blue;
             //MainPage = navPage;
 
-            MainPage = new NavigationPage(new StackLayout1());
+            MainPage = new NavigationPage(new GridLayout1());
         }
     }
 }
