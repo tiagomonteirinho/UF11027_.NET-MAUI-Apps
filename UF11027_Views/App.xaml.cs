@@ -8,7 +8,7 @@ namespace UF11027_Views
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new PresentationViews());
+            MainPage = new NavigationPage(new CommandViews());
         }
     }
 }
