@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UF11027_Views.Pages.ValueViews"
+             Title="Value Views">
+    <VerticalStackLayout>
+        <!--Checkbox-->
+        <CheckBox x:Name="checkBox1" CheckedChanged="checkBox1_CheckedChanged"
+                  Color="Blue" HorizontalOptions="Start"/>
+
+        <StackLayout Orientation="Horizontal">
+            <CheckBox x:Name="checkBox2" IsChecked="True" CheckedChanged="checkBox2_CheckedChanged"
+                      Color="Green" HorizontalOptions="Start"/>
+            <CheckBox x:Name="checkBox3" CheckedChanged="checkBox3_CheckedChanged"
+                      Color="Orange" HorizontalOptions="Start"/>
+        </StackLayout>
+
+        <!--Slider-->
+        <StackLayout Padding="40">
+            <Slider x:Name="slider1" ThumbColor="Navy" ValueChanged="slider1_ValueChanged"
+                    Minimum="0" Maximum="10"
+                    MinimumTrackColor="Yellow" MaximumTrackColor="DarkRed"/>
+            <Label x:Name="slider1_label1" HorizontalOptions="Center"/>
+            <Slider x:Name="slider2" ThumbImageSource="dotnet_bot.png" ValueChanged="slider2_ValueChanged"
+                    Minimum="0" Maximum="2"
+                    MinimumTrackColor="Yellow" MaximumTrackColor="DarkRed"/>
+            <Label x:Name="slider2_label1" HorizontalOptions="Center"/>
+        </StackLayout>
+        
+        <!--Stepper-->
+        <StackLayout Margin="10">
+            <Stepper x:Name="stepper1" Increment="1" ValueChanged="stepper1_ValueChanged"
+                     Minimum="1" Maximum="10"
+                     HorizontalOptions="Center"/>
+            <Label x:Name="stepper1_label1" HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <!--Switch-->
+        <StackLayout Margin="10">
+            <Switch x:Name="switch1" Toggled="switch1_Toggled"
+                     ThumbColor="Purple" OnColor="Navy"   
+                     HorizontalOptions="Center"/>
+        </StackLayout>
+        
+        <!--DatePicker-->
+        <DatePicker Date="01/11/2024" Format="dd/MM/yyyy" DateSelected="datePicker1_DateSelected"
+                    MinimumDate="01/11/2023" MaximumDate="01/11/2025"/>
+        
+        <!--TimePicker-->
+        <TimePicker x:Name="timePicker1" Time="06:31:12" Format="HH/mm/ss" PropertyChanged="timePicker1_PropertyChanged"
+                    HorizontalOptions="Center"/>
+
+    </VerticalStackLayout>
+</ContentPage>
