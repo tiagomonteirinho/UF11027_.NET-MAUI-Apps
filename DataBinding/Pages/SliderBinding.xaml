@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataBinding.Pages.SliderBinding"
+             Title="SliderBinding">
+    <VerticalStackLayout>
+
+        <Label BindingContext="{x:Reference Name=slider1}" Rotation="{Binding Path=Value}"
+               Text="Rotation" FontSize="Large" FontAttributes="Bold"
+               HorizontalOptions="Center"/>
+
+        <Slider x:Name="slider1" Maximum="360"
+                VerticalOptions="Center" WidthRequest="200"/>
+
+        <Label BindingContext="{x:Reference Name=slider1}"
+               Text="{Binding Value, StringFormat='Rotation degrees: {0:F0}º'}" FontSize="Large"
+               HorizontalOptions="Center"/>
+        <!--{0:F0}: automatically round to nearest integer.-->
+        
+    </VerticalStackLayout>
+</ContentPage>

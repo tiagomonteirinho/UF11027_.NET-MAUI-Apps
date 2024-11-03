@@ -1,4 +1,6 @@
-﻿namespace DataBinding
+﻿using DataBinding.Pages;
+
+namespace DataBinding
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new BindingNotification());
         }
     }
 }

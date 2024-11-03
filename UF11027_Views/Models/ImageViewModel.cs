@@ -11,7 +11,7 @@ namespace UF11027_Views.Models
     {
         public ObservableCollection<Image> images { get; private set; }
 
-        public ObservableCollection<Image> Images // 'ObservableCollection': automatically show changes in UI when updated.
+        public ObservableCollection<Image> Images // 'ObservableCollection': automatically show changes at UI when updated.
         {
             get { return images; }
             set { images = value; }
