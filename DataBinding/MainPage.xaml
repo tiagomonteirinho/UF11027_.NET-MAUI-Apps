@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataBinding.MainPage"
+             xmlns:models="clr-namespace:DataBinding.Models">
+
+    <!--BindingContext-->
+    <!--<ContentPage.BindingContext>
+    <models:Product x:Name="product1" Name="Apple iPhone 14" Price="770.00" Stock="899"/>
+    </ContentPage.BindingContext>-->
+
+    <!--Resources-->
+    <ContentPage.Resources>
+        <models:Product x:Key="product2" Name="Samsung Galaxy A53" Price="549.00" Stock="1099"/>
+    </ContentPage.Resources>
+    
+    <ScrollView>
+        <VerticalStackLayout>
+            <!--<Button x:Name="button1" Clicked="button1_Clicked"
+                Text="Click to show product info" FontSize="Medium"
+                HorizontalOptions="Center" />-->
+            
+            <!--<Label x:Name="product1_label1" 
+                   Text="{Binding Source={x:Reference product1}, Path=Name}" FontSize="Large"
+                   HorizontalOptions="Center"/>-->
+
+            <Label x:Name="product2_label1" 
+                   Text="{Binding Name, Source={StaticResource product2}}" FontSize="Large"
+                   HorizontalOptions="Center"/>
+            <Label x:Name="product2_label2" 
+                   Text="{Binding Price, Source={StaticResource product2}, StringFormat='Price: {0:F2}€'}" FontSize="Large"
+                   HorizontalOptions="Center"/>
+            <Label x:Name="product2_label3" 
+                   Text="{Binding Stock, Source={StaticResource product2}, StringFormat='Stock: {0}'}" FontSize="Large"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
