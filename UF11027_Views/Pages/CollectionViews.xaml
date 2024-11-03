@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UF11027_Views.Pages.CollectionViews"
+             Title="CollectionViews">
+    <ScrollView>
+        <VerticalStackLayout>
+        
+            <!--CarouselView-->
+            <!--<CarouselView ItemsSource="{Binding Images}" CurrentItemChanged="carouselView1_CurrentItemChanged"
+                          IndicatorView="indicatorView1">
+                <CarouselView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"/>
+                </CarouselView.ItemsLayout>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="5" Margin="10"
+                               HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                            <StackLayout>
+                                <Image Source="{Binding ImageUrl}" Aspect="AspectFit"
+                                       WidthRequest="400" HeightRequest="300"/>
+                                <Label Text="{Binding Name}" FontSize="Medium"
+                                       HorizontalOptions="Center" />
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>-->
+        
+            <!--IndicatorView-->
+            <!--<IndicatorView x:Name="indicatorView1"
+                           IndicatorsShape="Square" IndicatorSize="20"
+                           IndicatorColor="Gray" SelectedIndicatorColor="Blue"
+                           HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>-->
+
+            <!--ListView-->
+            <!--<ListView ItemsSource="{Binding Images}"
+                      SelectionMode="Single"
+                      SeparatorColor="White" SeparatorVisibility="Default">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell ImageSource="{Binding ImageUrl}"
+                                   Text="{Binding Name}" TextColor="Black"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
+            
+            <!--CollectionView: similar to ListView, but with additional layout options.-->
+            <!--<CollectionView ItemsSource="{Binding Images}"
+                            SelectionMode="Multiple" Margin="10"
+                            HorizontalOptions="Center" VerticalOptions="Center">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                            <Frame CornerRadius="5" Margin="10"
+                                   HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                                <StackLayout>
+                                    <Image Source="{Binding ImageUrl}" Aspect="AspectFit"
+                                           WidthRequest="100" HeightRequest="100"/>
+                                    <Label Text="{Binding Name}" FontSize="Medium"
+                                       HorizontalOptions="Center" />
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>-->
+            
+            <!--Picker-->
+            <!--<Picker x:Name="picker1" Title="Select a colour:">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Red</x:String>
+                        <x:String>Green</x:String>
+                        <x:String>Blue</x:String>
+                        <x:String>Yellow</x:String>
+                        <x:String>Orange</x:String>
+                        <x:String>Pink</x:String>
+                        <x:String>Brown</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="{Binding Source={x:Reference picker1}, Path=SelectedItem}" FontSize="Medium"/>-->
+
+            <!--TableView-->
+            <!--<TableView Intent="Menu">
+                <TableRoot>
+                    <TableSection Title=".NET MAUI">
+                        <TextCell Text="1. Chapter 1"
+                                  Detail="Presentation views." />
+                        <TextCell Text="2. Chapter 2"
+                                  Detail="Command views." />
+                        <TextCell Text="3. Chapter 3"
+                                  Detail="Value views." />
+                        <TextCell Text="4. Chapter 4"
+                                  Detail="Action views." />
+                        <TextCell Text="5. Chapter 5"
+                                  Detail="Collection views." />
+                    </TableSection>
+                </TableRoot>
+            </TableView>-->
+
+
+            <TableView>
+                <TableRoot>
+                    <TableSection Title="Delivery preferences">
+                        <SwitchCell Text="Receive SMS reminder 2 hours before delivery" On="True"/>
+                        <SwitchCell Text="Receive phone call 10 minutes before delivery" On="True"/>
+                        <SwitchCell x:Name="updateEmails_switchCell1" OnChanged="updateEmails_switchCell1_OnChanged"
+                            Text="Receive delivery update emails"/>
+                        <TextCell Text="Estimated delivery time: 3-5 Business Days" TextColor="Black"/>
+                        <EntryCell Placeholder="Additional instructions (e.g., leave at door)"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <Button x:Name="proceed_button1" Text="Proceed" VerticalOptions="End"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
