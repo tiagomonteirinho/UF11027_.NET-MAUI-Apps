@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hangman.MainPage">
+
+    <Grid RowDefinitions=".6*,.4*" RowSpacing="20">
+        <VerticalStackLayout Spacing="10">
+            <Label Text="{Binding Status}"
+                   FontAttributes="Bold" FontSize="30" TextColor="Red"
+                   HorizontalOptions="Center"/>
+
+            <Image Source="{Binding Image}" HeightRequest="220"/>
+
+            <Label Text="{Binding Showcase}" FontSize="40"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Label Text="{Binding Result}" 
+                   FontSize="30" FontAttributes="Bold"
+                   BackgroundColor="White" HorizontalTextAlignment="Center"/>
+
+            <Button Text="Reset" Clicked="Reset_Clicked"
+                    TextColor="White" FontSize="Medium" 
+                    FontAttributes="Bold" BackgroundColor="Black"
+                    WidthRequest="100" HorizontalOptions="Center"/>
+
+        </VerticalStackLayout>
+        <FlexLayout x:Name="LettersContainer" BindableLayout.ItemsSource="{Binding Letters}"
+                    Grid.Row="1" JustifyContent="SpaceEvenly" Wrap="Wrap">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <Button Clicked="Letter_Clicked" Text="{Binding .}" FontAttributes="Bold"
+                            BackgroundColor="Black" WidthRequest="50"  HeightRequest="50"/>
+
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </FlexLayout>
+
+    </Grid>
+</ContentPage>
