@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Resources.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <!--Image-->
+            <!--<Image Source="cheetah.gif" IsAnimationPlaying="True"/>
+            <Image>
+                <Image.Source>
+                    <UriImageSource Uri="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1920px-Image_created_with_a_mobile_phone.png"
+                                    CacheValidity="10:00:00:00"/>
+                </Image.Source>
+            </Image>-->
+
+            <!--Font-->
+            <!--<Label Text="Text with specific font." FontFamily="FontCustomName" FontSize="Large"/>
+            <Label Text="Text with specific font for each platform."
+                   FontSize="{OnPlatform WinUI=24, Android=20, iOS=20}">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="WinUI" Value="OpenSans-Regular"/>
+                        <On Platform="Android" Value="OpenSans-Regular"/>
+                        <On Platform="WinUI" Value="OpenSans-Regular"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>-->
+            
+            <!--Font (icons)-->
+            <!--<Image>
+                <Image.Source>
+                    <FontImageSource FontFamily="Fontello-Icons"
+                                     Glyph="&#xE800;"
+                                     Size="40"
+                                     Color="Black"/>
+                </Image.Source>
+            </Image>
+            <Image>
+                <Image.Source>
+                    <FontImageSource FontFamily="{OnPlatform Android=Fontello-Icons}"
+                                     Glyph="&#xE803;"
+                                     Size="40"
+                                     Color="Black"/>
+                </Image.Source>
+            </Image>
+            <Image Source="{FontImage &#xE800;, FontFamily=Fontello-Icons, Size=40, Color=Black}"/>-->
+
+            <Image Source="{Binding Image}" Aspect="AspectFit"/>
+            <VerticalStackLayout HorizontalOptions="Center">
+                <Label Text="{Binding Title}" FontSize="Medium"/>
+                <Label Text="{Binding Category}" FontSize="Medium"/>
+                <Label Text="{Binding Number}" FontSize="Medium"/>
+            </VerticalStackLayout>
+
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>
