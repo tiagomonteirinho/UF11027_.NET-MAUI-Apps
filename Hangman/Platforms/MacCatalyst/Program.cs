@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace Hangman
+namespace HangmanGameGame
 {
     public class Program
     {

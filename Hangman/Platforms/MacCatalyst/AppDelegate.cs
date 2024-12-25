@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace Hangman
+namespace HangmanGameGame
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Views.Pages.PresentationViews"
+             Title="Presentation Views">
+
+    <!--ScrollView-->
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="15">
+            <!--BoxView-->
+            <BoxView Color="CornflowerBlue"
+                     CornerRadius="15"
+                     WidthRequest="150"
+                     HeightRequest="150"
+                     HorizontalOptions="Start"
+                     VerticalOptions="Center"/>
+
+            <!--Label-->
+            <Label Text="This is a&#10;label."
+                   CharacterSpacing="2"
+                   TextColor="Black"
+                   BackgroundColor="Yellow"
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
+            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                   FontSize="Small"
+                   LineHeight="1.5"
+                   MaxLines="4"/>
+
+            <Label Text="This is a label with &lt;strong style=&quot;color:red&quot;&gt;HTML text."
+                   TextType="Html"
+                   FontSize="Large"
+                   TextColor="Black"
+                   BackgroundColor="Yellow"/>
+
+            <Label Text="This is a label with underline text." TextDecorations="Underline"/>
+            <Label Text="This is a label with strikethrough text." TextDecorations="Strikethrough"/>
+            <Label Text="This is a label with underline and strikethrough text." TextDecorations="Underline,Strikethrough"/>
+
+            <Label Text="This is a label with lowercase text." TextTransform="Lowercase"/>
+            <Label Text="This is a label with uppercase text." TextTransform="Uppercase"/>
+        
+            <!--Ellipse-->
+            <Ellipse Fill="Yellow"
+                     Stroke="Blue"
+                     StrokeThickness="10"
+                     HeightRequest="100"
+                     WidthRequest="150"
+                     HorizontalOptions="Center"/>
+            
+            <!--Line-->
+            <Line Stroke="Black"
+                  X1="25"
+                  Y1="0"
+                  X2="150"
+                  Y2="50"
+                  StrokeThickness="10"/>
+            
+            <!--Rectangle-->
+            <Rectangle Fill="Maroon"
+                       Stroke="Black"
+                       StrokeThickness="5"
+                       WidthRequest="150"
+                       HeightRequest="100"
+                       HorizontalOptions="End"
+                       RadiusX="50"
+                       RadiusY="25"/>
+            
+            <!--Polygon-->
+            <Polygon Points="10,10 120,70 10,50"
+                     Fill="LightBlue"
+                     Stroke="DarkBlue"
+                     StrokeThickness="5"/>
+
+            <!--Polyline-->
+            <Polyline Points="0,0 10,30, 15,0 18,60
+                              23,30 35,30 40,0 43,60 48,30 100,30"
+                      Stroke="Red"/>
+
+            <!--Path-->
+            <Path Data="M 10,100 L 100,100 100,50Z"
+                  Aspect="Uniform"
+                  HorizontalOptions="Center"
+                  Stroke="Black"/>
+
+            <!--Border-->
+            <Border Stroke="SandyBrown"
+                    StrokeThickness="4"
+                    StrokeShape="RoundRectangle 40,0,0,40"
+                    Background="DarkBlue"
+                    Padding="16,8"
+                    HorizontalOptions="Center">
+                <Label Text="This is a label with a border."
+                       TextColor="White"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+            </Border>
+
+            <!--Image-->
+            <Image Source="dotnet_bot.png"
+                   Aspect="Fill"
+                   HeightRequest="100"/>
+
+            <!--Image (GIF)-->
+            <Image Source="https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif"
+                   IsAnimationPlaying="True"
+                   Aspect="AspectFit"
+                   WidthRequest="150"/>
+
+            <!--Frame-->
+            <Frame CornerRadius="200" WidthRequest="200">
+                <Image Source="dotnet_bot.png"/>
+            </Frame>
+
+            <Frame BorderColor="Gray" CornerRadius="5" Padding="8">
+                <StackLayout>
+                    <Label Text="This is an example card" FontSize="Title" FontAttributes="Bold"/>
+                    <BoxView Color="Gray" HeightRequest="2" HorizontalOptions="Fill"/>
+                    <Label Text="with a frame and a stack layout." FontSize="Body"/>
+                </StackLayout>
+            </Frame>
+            
+            <!--WebView-->
+            <WebView Source="https://github.com/tiagomonteirinho/" HeightRequest="700"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,4 +1,4 @@
-﻿namespace Hangman
+﻿namespace HangmanGameGame
 {
     public partial class AppShell : Shell
     {

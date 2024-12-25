@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Diagnostics;
 
-namespace Hangman
+namespace HangmanGameGame
 {
     public partial class MainPage : ContentPage, INotifyPropertyChanged
     {

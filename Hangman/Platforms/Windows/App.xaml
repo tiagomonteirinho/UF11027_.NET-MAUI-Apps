@@ -1,8 +1,8 @@
 ﻿<maui:MauiWinUIApplication
-    x:Class="Hangman.WinUI.App"
+    x:Class="HangmanGameGame.WinUI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:maui="using:Microsoft.Maui"
-    xmlns:local="using:Hangman.WinUI">
+    xmlns:local="using:HangmanGameGame.WinUI">
 
 </maui:MauiWinUIApplication>

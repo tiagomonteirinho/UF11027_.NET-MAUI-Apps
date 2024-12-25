@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.FlexLayout1"
+             Title="FlexLayout1">
+    <!--'FlexLayout': layout that adapts to different sizes. Better approach than stack layouts organisation-wise.-->
+    <!--<FlexLayout>
+        <Label Text="Label 1" BackgroundColor="Red" FontSize="Large"
+               FlexLayout.AlignSelf="Start" />
+        <Label Text="Label 2" BackgroundColor="Green" FontSize="Large" 
+               FlexLayout.AlignSelf="Center" />
+        <Label Text="Label 3" BackgroundColor="Blue" FontSize="Large" 
+               FlexLayout.AlignSelf="End" />
+        <Label Text="Label 4" BackgroundColor="Yellow" FontSize="Large" 
+               FlexLayout.AlignSelf="Auto" />
+    </FlexLayout>-->
+    
+    <!--<FlexLayout Direction="Column">
+        --><!--Header--><!--
+        <Label Text="Header" FontSize="Large" BackgroundColor="Aqua" HorizontalTextAlignment="Center" />
+
+        --><!--Body--><!--
+        <FlexLayout FlexLayout.Grow="1">
+            
+            --><!--Medial content--><!--
+            <Label Text="Body" FontSize="Large" Background="Orange" FlexLayout.Grow="1"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            
+            --><!--Lateral content--><!--
+            <BoxView FlexLayout.Basis="50" FlexLayout.Order="-1" Color="Red" />
+            <BoxView FlexLayout.Basis="50" Color="Yellow" />
+
+        </FlexLayout>
+        
+        --><!--Footer--><!--
+        <Label Text="Footer" FontSize="Large" BackgroundColor="Green" HorizontalTextAlignment="Center" />
+    </FlexLayout>-->
+
+    <FlexLayout Direction="Column" JustifyContent="SpaceEvenly" AlignItems="Center">
+        <Label Text="Label 1" FontSize="Large" TextColor="Red"/>
+        <Image Source="dotnet_bot.svg"/>
+        <Button Text="Button 1" FontSize="Large"/>
+        <Label Text="Label 2" FontSize="Large"/>
+    </FlexLayout>
+    
+    
+</ContentPage>

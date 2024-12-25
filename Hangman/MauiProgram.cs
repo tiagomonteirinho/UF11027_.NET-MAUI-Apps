@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace Hangman
+namespace HangmanGameGame
 {
     public static class MauiProgram
     {
